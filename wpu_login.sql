@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 20, 2019 at 01:49 PM
+-- Generation Time: Sep 09, 2019 at 03:05 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -46,8 +46,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
 (3, 'ramadhan', 'arif@rama.com', 'rama.png', '$2y$10$i4MOK8y2PHtZ/YoTDzPsXOhTxSf6LtC1UP5hSIsYorEEFXYLMjHmq', 2, 1, 1566114341),
 (4, 'admin', 'admin@gmail.com', 'index.jpg', '$2y$10$a1MWelwwAhlBHCEx70.pjOQCbf.0089YeHoEB0hvuC8eMvA.fIKH6', 1, 1, 1566116329),
-(5, 'sjhsjahsj', 'jasjj@jsajhs.sks', 'default.jpg', '$2y$10$h8m0m1o1jvqD80IWmaljXeUD7z34mTQk1rJh2K0ONIDWB4cKiz9QC', 2, 0, 1566294764),
-(8, 'rama', 'ariframdhan833@gmail.com', 'default.jpg', '$2y$10$Yu0zuCJk6E1xrncUtrq5fuwdlcOfDN1XgPE.36HFbehPnN8PY0BLK', 2, 0, 1566294979);
+(20, 'joko', 'ariframdhan833@gmail.com', 'default.jpg', '$2y$10$fajk3pMaYmxqPCtMbpyYaOcj7U.7edVz4qv2yASDAH51SFv7SZbdW', 2, 1, 1566315002);
 
 -- --------------------------------------------------------
 
@@ -139,7 +138,8 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (5, 1, 'cek', 'admin/cek', 'fab fa-fw fa-youtube', 1),
 (6, 1, 'Role', 'admin/role', 'fas fa-fw fa-folder-open', 1),
 (7, 2, 'Edit Profile', 'user/edit', 'fas fa-fw fa-user-tie', 1),
-(8, 2, 'Change Password', 'user/changepassword', 'fas fa-fw fa-key', 1);
+(8, 2, 'Change Password', 'user/changepassword', 'fas fa-fw fa-key', 1),
+(9, 1, 'User Manajemen', 'admin/usermanajemen', 'fas fa-fw fa-folder-open', 1);
 
 -- --------------------------------------------------------
 
@@ -159,7 +159,8 @@ CREATE TABLE `user_token` (
 --
 
 INSERT INTO `user_token` (`id`, `email`, `token`, `date_created`) VALUES
-(1, 'ariframdhan833@gmail.com', 'c0VfFYwPtA+9QjjTz/RwaCKkuU/8JLEGcHNBrX3MYpU=', 1566294979);
+(21, 'ariframdhan833@gmail.com', 'tY+lVsG5Q83VN5w7jmoWJs77ohT6vvj3ad7Ow/SWcIE=', 1566315053),
+(22, 'ariframdhan833@gmail.com', '/UubUtIMN4KuaHWTJOtRQQOtFO8YbEAR2SW3HYxL7Pc=', 1566352611);
 
 --
 -- Indexes for dumped tables
@@ -209,7 +210,7 @@ ALTER TABLE `user_token`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
@@ -233,13 +234,13 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user_token`
 --
 ALTER TABLE `user_token`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -70,4 +70,23 @@ class Admin extends CI_Controller
             Access changed!
             </div>');
     }
+
+    public function userManajemen()
+    {
+        $data['title'] = 'User Manajemen';
+
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['all_user'] = $this->db->get('user');
+
+        $this->load->model('Userlevel_model', 'user_level');
+        $data['level'] = $this->user_level->getUserLevel($data['all_user']);
+
+        // $data['role'] = $this->db->get('user_role')->result_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/user-manajemen', $data);
+        $this->load->view('templates/footer');
+    }
 }

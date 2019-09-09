@@ -1,0 +1,67 @@
+/* navbar */
+#search{
+    padding-right: 0px;
+}
+
+/* carousel */
+#carousel .carousel-inner img {
+    width: 100%;
+    height: 500px;
+}
+
+/* content */
+.container{
+    padding-top: 50px;
+}
+#judul{
+    color: green;
+    padding-bottom: 20px;
+    font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+.berita{
+    padding-bottom: 50px;
+}
+#link{
+    float: left;
+}
+#kegitan_tahunan{
+    width: 100%;
+    height: 300px;
+    float: right;
+}
+#kegiatan{
+    padding-bottom: 50px;
+}
+#kegitan_tahunan .carousel-inner img {
+    width: 100%;
+    height: 300px;
+}
+
+/* footer */
+/* #medsos{
+    padding-right: 20px;
+}
+#alamat{
+    padding-left: 100px;
+} */
+.sticky-footer{
+    margin-top: 30px;
+    clear: right;
+}
+.copyright{
+    text-align: center;
+}
+
+/* -------------------------------------------------------- */
+/* Struktur Pemerintahan */
+
+#judul_struktur{
+    background-image: url(/assets/img/1.jpeg);
+}
+/* img-circle */
+.row{
+    padding-top: 30px;
+}
+.struktur{
+    background-image: url(/assets/img/bg-struktur.jpeg);
+}
